@@ -1,11 +1,15 @@
-@extends('auth.layouts.app')
+@extends('layouts.appadmin')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+    @include('admin.aside')
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">Reservas</div>
                 <div class="card-body">
+
+                    @include('custom.message')
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
@@ -15,12 +19,10 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
+                        <th scope="col">Usuario</th>
                         <th scope="col">Tour</th>
-                        <th scope="col">Ruta</th>
-                        <th scope="col">Restaurantes</th>
-                        <th scope="col">Hospedajes</th>
-                        <th scope="col">Fecha de viaje</th>
-                        <th colspan="1">Opciones</th>
+                        <th scope="col">Fecha de partida</th>
+                        <th colspan="2">Opciones</th>
                         <th scope="col">Estado</th>
                         </tr>
                     </thead>
@@ -28,12 +30,11 @@
 
                     @foreach ($reserves as $reserve)
                         <tr>
+                            <td>{{ $reserve->user->name }}</td>
                             <td>{{ $reserve->tour->name }}</td>
-                            <td>{{ $reserve->route->name }}</td>
-                            <td>{{ $reserve->restaurant->name }}</td>
-                            <td>{{ $reserve->lodging->name }}</td>
                             <td>{{ $reserve->date }}</td>
-                            <td> <a class="btn btn-dark" href="{{route('reserves.edit', $reserve->id)}}">Cancelar </a> </td>
+                            <td> <a class="btn btn-info" href="{{route('reserve.show', $reserve->id)}}">Ver detalles </a> </td>
+                            <td> <a class="btn btn-success" href="{{route('reserve.edit', $reserve->id)}}">Editar </a> </td>
                             <td>
                             <input type="text"
                             @if( $reserve->status == '0')    
@@ -62,5 +63,3 @@
     </div>
 </div>
 @endsection
-
-

@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Reserve;
 use App\User;
+use App\Tour;
+use App\Route;
+use App\Lodging;
+use App\Restaurant;
 
-class UserController extends Controller
+class ReserveController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +19,14 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users=User::whereType(1)->orderBy('id','Asc')->paginate(15);
-        return view('admin.user.index', compact('users'));
+        $reserves=Reserve::orderBy('id','Asc')->paginate(15);
+        $users=User::orderBy('id','Asc')->paginate(15);
+        $tours=Tour::orderBy('id','Asc')->paginate(15);
+        $routes=Route::orderBy('id','Asc')->paginate(15);
+        $lodgings=Lodging::orderBy('id','Asc')->paginate(15);
+        $restaurants=Restaurant::orderBy('id','Asc')->paginate(15);
+
+        return view('admin.reserve.index', compact('reserves', 'users', 'tours', 'routes', 'lodgings', 'restaurants'));
     }
 
     /**
@@ -46,9 +56,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Reserve $reserve)
     {
-        //
+        return view('admin.reserve.show', compact('reserve'));
     }
 
     /**
@@ -57,10 +67,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Reserve $reserve)
     {
 
-        return view('admin.user.edit', compact('user'));
+        return view('admin.reserve.edit', compact('reserve'));
     }
 
     /**
@@ -70,19 +80,18 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Reserve $reserve)
     {
         $request->validate([
 
-            'type'  => 'in:1,2',
+            'state'  => 'integer| in:0,1,2',
             
         ]);
 
-        $user->update($request->all());
+        $reserve->update($request->all());
 
-        
-        return redirect()->route('user.index', compact ('user'))
-        ->with('status_success','Usuario actualizado correctamente'); 
+        return redirect()->route('reserve.index', compact ('reserve'))
+        ->with('status_success','Reserva actualizado correctamente'); 
     }
 
     /**
@@ -91,11 +100,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        $user->delete();
-
-        return redirect()->route('user.index')
-            ->with('status_success','Usuario removido correctamente'); 
+        //
     }
 }

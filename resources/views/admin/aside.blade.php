@@ -5,5 +5,6 @@
         <li class="list-group-item"><a href="route">Rutas</a></li>
         <li class="list-group-item"><a href="restaurant">Restaurantes</a></li>
         <li class="list-group-item"><a href="lodging">Hospedajes</a></li>
+        <li class="list-group-item"><a href="reserve">Reservas</a></li>
     </ul>
 </div>

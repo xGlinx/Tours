@@ -37,8 +37,13 @@ class ToursController extends Controller
         $request['user_id']=Auth::user()->id;
         $reserve = Reserve::create($request->all()); 
     
-        return view('user/reserve')
+        return redirect()->route('tours.index')
             ->with('status_success','Reserva guardada satisfactoriamente'); 
+    }
+
+    public function edit()
+    {
+        return view('user/reserve', compact('tour'));
     }
 
 }

@@ -21,7 +21,7 @@ class CreateReservesTable extends Migration
             $table->foreignId('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
             $table->foreignId('lodging_id')->references('id')->on('lodgings')->onDelete('cascade');
             $table->date('date');
-            $table->integer('state')->default('0');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

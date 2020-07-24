@@ -12,26 +12,26 @@ class Reserve extends Model
 
     public function user(){
 
-        return $this->belongTo('App\User');
+        return $this->belongsTo('App\User');
     }
 
     public function tour(){
 
-        return $this->belongTo('App\Tour');
+        return $this->belongsTo('App\Tour');
     }
 
     public function route(){
 
-        return $this->belongTo('App\Route');
+        return $this->belongsTo('App\Route');
     }
 
     public function restaurant(){
 
-        return $this->belongTo('App\Restaurant');
+        return $this->belongsTo('App\Restaurant');
     }
 
     public function lodging(){
 
-        return $this->belongTo('App\Lodging');
+        return $this->belongsTo('App\Lodging');
     }
 }
