@@ -27,12 +27,10 @@
             <button class="navbar-toggler ml-auto" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse"> <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span> </button>
             <div id="my-nav" class="collapse navbar-collapse">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"> <a class="nav-link" href="#">Inicio</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#about" tabindex="-1" aria-disabled="true">Lugares Turísticos</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#about" tabindex="-1" aria-disabled="true">Hoteles</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#about" tabindex="-1" aria-disabled="true">Restaurants</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="tour_huancayo.html" tabindex="-1" aria-disabled="true">Tours</a></li>
-                        @if (Route::has('login'))                    
+                <li class="nav-item"> <a class="nav-link" href="{{url('')}}">Inicio</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="{{url('tours')}}" tabindex="-1" aria-disabled="true">Tours</a></li>
+                        
+                    @if (Route::has('login'))                    
                                 @auth
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

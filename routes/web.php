@@ -16,5 +16,7 @@ Route::resource('/restaurant', 'RestaurantController')->names('restaurant');
 Route::resource('/lodging', 'LodgingController')->names('lodging');
 
 Route::resource('/ruta', 'RutaController')->names('ruta');
+Route::resource('/tours', 'ToursController')->names('tours');
 
 Route::get('/home', 'HomeController@index')->name('home');
+

@@ -14,4 +14,9 @@ class Route extends Model
 
         return $this->belongTo('App\Tour');
     }
+
+    public function reserve(){
+
+        return $this->hasMany('App\Reserve');
+    }
 }

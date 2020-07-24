@@ -19,6 +19,11 @@ class User extends Authenticatable
         'name', 'last-name', 'dni', 'direction', 'phone', 'email', 'date-birthday', 'type', 'password',
     ];
 
+    public function reserve(){
+
+        return $this->hasMany('App\Reserve');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

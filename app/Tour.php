@@ -24,4 +24,9 @@ class Tour extends Model
 
         return $this->hasMany('App\Lodging');
     }
+
+    public function reserve(){
+
+        return $this->hasMany('App\Reserve');
+    }
 }
