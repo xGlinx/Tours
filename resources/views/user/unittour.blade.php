@@ -30,12 +30,32 @@
                 </div>
             </div>
             
-            <div class="row">
+            <div>
+                <h2 >Rutas</h2>
+                    <div class="row justify-content-center">
+                    @forelse ($rutas as $ruta)
+                        <div class="col-md-5">
+                            <div class="card mb-4">
+                                <div class="card-img container-iframe">
+                                    <iframe src="{{$ruta['url-photo']}}" position="center" width="348" height="402" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{$ruta->name}}</h4>
+                                    <p class="card-text">{{$ruta->description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                        <p>No se encuentra ningun Hospedaje</p> 
+                    @endforelse
+                    </div>
+            </div>
+
+            <div>
                 <h2 >Los Mejores Hospedajes</h2>
-                <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
+                    <div class="row justify-content-center">
                     @forelse ($hospedajes as $hospedaje)
-                        <div class="col-md-5" style="float:left">
+                        <div class="col-md-5">
                             <div class="card mb-4">
                                 <div class="card-img container-iframe">
                                     <iframe src="{{$hospedaje['url-photo']}}" position="center" width="348" height="402" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
@@ -53,14 +73,13 @@
                         <p>No se encuentra ningun Hospedaje</p> 
                     @endforelse
                     </div>
-                </div>
             </div>
-            <div class="row">
-                <h2>Los Mejores Restaurantes</h2>
-                <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
+
+            <div>
+                <h2 >Los Mejores Restaurantes</h2>
+                    <div class="row justify-content-center">
                     @forelse ($restaurantes as $restaurante)
-                        <div class="col-md-5" style="float:left">
+                        <div class="col-md-5">
                             <div class="card mb-4">
                                 <div class="card-img container-iframe">
                                     <iframe src="{{$restaurante['url-photo']}}" position="center" width="348" height="402" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
@@ -75,10 +94,9 @@
                             </div>
                         </div>
                     @empty
-                        <p>No se encuentra ningun Restaurant</p>
+                        <p>No se encuentra ningun Hospedaje</p> 
                     @endforelse
                     </div>
-                </div>
             </div>
         </div>
         

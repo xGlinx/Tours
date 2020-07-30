@@ -16,9 +16,13 @@ Route::resource('/restaurant', 'RestaurantController')->names('restaurant');
 Route::resource('/lodging', 'LodgingController')->names('lodging');
 Route::resource('/reserve', 'ReserveController')->names('reserve');
 
-Route::resource('/ruta', 'RutaController')->names('ruta');
 Route::resource('/tours', 'ToursController')->names('tours');
 Route::resource('/reserves', 'ReservesController')->names('reserves');
+
+Route::resource('/huancayo', 'HuancayoController')->names('huancayo');
+Route::resource('/identidad', 'IdentidadController')->names('identidad');
+Route::resource('/huaytapallana', 'HuaytapallanaController')->names('huaytapallana');
+Route::resource('/ñahuimpuquio', 'ÑahuimpuquioController')->names('ñahuimpuquio');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

@@ -96,7 +96,7 @@
               alt=""
             />
             <div class="card-img-overlay">
-              <a href=""
+              <a href="{{url('huancayo')}}"
                 ><img
                   src="img/heart.png"
                   class="heart"
@@ -115,7 +115,7 @@
           <div class="card">
             <img class="card-img" src="img/huancayo1.jpeg" alt="" />
             <div class="card-img-overlay">
-              <a href="#"
+              <a href="{{url('identidad')}}"
                 ><img
                   src="img/heart.png"
                   class="heart"
@@ -135,10 +135,10 @@
             <img
               class="card-img"
               src="img/carhuamayo-img3.jpg"
-              alt=""
+              alt="Huaytapallana"
             />
             <div class="card-img-overlay">
-              <a href="#"
+              <a href="{{url('huaytapallana')}}"
                 ><img
                   src="img/heart.png"
                   class="heart"
@@ -158,17 +158,17 @@
             <img
               class="card-img"
               src="img/carhuamayo-img4.jpg"
-              alt=""
+              alt="ñahuimpuquio"
             />
             <div class="card-img-overlay">
-              <a href="#"
+              <a href="{{url('ñahuimpuquio')}}"
                 ><img
                   src="img/heart.png"
                   class="heart"
                   alt="heart icon"
               /></a>
               <div class="bottom-text">
-                <h5 class="card-title">Laguna Azúl</h5>
+                <h5 class="card-title">Laguna Ñahuimpuquio</h5>
                 <!--<p class="card-text"><b>La Laguna Azul, también conocida como Laguna del Sauce se encuentra localizada en el distrito
                                   de Sauce dentro de la región de San Martín. Esta ocupa una extensión de 430, 80 hectáreas</b></p>
                                 -->
