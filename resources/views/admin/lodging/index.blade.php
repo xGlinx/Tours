@@ -6,12 +6,12 @@
     @include('admin.aside')
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">Hospedajes</div>
+                <div class="card-header">Servicios</div>
                 <div class="card-body">
 
                 <a href="{{route('lodging.create')}}" 
                     class="btn btn-primary float-right">
-                    Nuevo Hospedaje
+                    Nuevo Servicio
                 </a>
                 <br>
                 <br>
@@ -26,7 +26,7 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                        <th scope="col">Name</th>
+                        <th scope="col">Nombre</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Posición</th>
                         <th scope="col">Precio</th>

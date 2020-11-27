@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h2>Crear Ruta</h2></div>
+                <div class="card-header"><h2>Crear Servicio</h2></div>
 
                 <div class="card-body">
                   @include('custom.message')
@@ -17,7 +17,7 @@
                     <div class="container">
 
                           <div class="form-group">
-                            <label for="name">Nombre de la Ruta</label>                           
+                            <label for="name">Nombre del Servicio</label>                           
                             <input type="text" 
                             class="form-control" 
                             id="name" 
@@ -57,7 +57,7 @@
                           </div>
 
                           <div class="form-group"> 
-                            <label for="name">Posición</label>                             
+                            <label for="name">Precio</label>                             
                             <input type="text" 
                             class="form-control" 
                             id="price" 
@@ -68,7 +68,7 @@
                         
                           <div class="form-group">
                             <select class="form-control form-control-sm" id="tour_id" name="tour_id">
-                                <option value="null">Seleccione un Tour</option>
+                                <option value="null">Seleccione una Empresa</option>
 
                             @foreach($tours as $tour)
                                 @if($tour->id == $lodging['tour_id'])    

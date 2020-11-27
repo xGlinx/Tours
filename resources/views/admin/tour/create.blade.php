@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h2>Crear Tour</h2></div>
+                <div class="card-header"><h2>Crear Empresa</h2></div>
 
                 <div class="card-body">
                   @include('custom.message')
@@ -16,7 +16,7 @@
                     <div class="container">
 
                           <div class="form-group">
-                            <label for="name">Nombre del Tour</label>                           
+                            <label for="name">Nombre de la Empresa</label>                           
                             <input type="text" 
                             class="form-control" 
                             id="name" 
@@ -65,29 +65,40 @@
                             >
                           </div>
 
-                          <div class="form-group">
-                            <label for="name">Duracion del Tour</label>  
-                            <textarea class="form-control" 
+                          <div class="form-group"> 
+                            <label for="name">RUC</label> 
+
+                            <input class="form-control" 
                             name="duration" 
                             id="duration" 
                             rows="2"> 
                             {{ old('duration')}}
-                            </textarea>
+                            </input>
                           </div>
 
                           <div class="form-group"> 
-                            <label for="name">Precio Total Aproximado</label>                             
-                            <input type="text" 
+                            <!--
+                            <label for="name">Precio Total Aproximado</label> 
+                            -->                            
+                            <input 
+                            style="display:none"
+                            type="text" 
                             class="form-control" 
-                            id="price" 
+                            id="price"
+                            value='0'
+                            type='hidden'
                             name="price"
                             value="{{ old('price')}}"
                             >
                           </div>
 
-                          <div class="form-group"> 
-                            <label for="name">Precio del viaje</label>                            
+                          <div class="form-group">
+                            <!-- 
+                            <label for="name">Precio del viaje</label>   
+                            -->                         
                             <input type="text" 
+                            style="display:none"
+                            value='0'
                             class="form-control" 
                             id="price-travel" 
                             name="price-travel"

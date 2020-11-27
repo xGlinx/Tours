@@ -6,12 +6,12 @@
     @include('admin.aside')
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">Tours</div>
+                <div class="card-header">Empresas</div>
                 <div class="card-body">
 
                 <a href="{{route('tour.create')}}" 
                     class="btn btn-primary float-right">
-                    Nuevo Tour
+                    Nueva Empresa
                 </a>
                 <br>
                 <br>
@@ -27,8 +27,7 @@
                     <thead>
                         <tr>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Duración</th>
-                        <th scope="col">Precio de Viaje</th>
+                        <th scope="col">RUC</th>
                         <th colspan="2">Opciones</th>
                         </tr>
                     </thead>
@@ -38,7 +37,6 @@
                         <tr>
                             <td>{{ $tour->name }}</td>
                             <td>{{ $tour->duration }}</td>
-                            <td>{{ $tour['price-travel']}}</td>
                             <td> <a class="btn btn-success" href="{{route('tour.edit', $tour->id)}}">Editar</a> </td>
                             <td> 
                                 <form action="{{ route('tour.destroy',$tour->id)}}" method="POST">

@@ -67,33 +67,13 @@
                           </div>
 
                           <div class="form-group">
-                            <label for="name">Duracion del Tour</label>  
+                            <label for="name">RUC</label>  
                             <textarea class="form-control" 
                             name="duration" 
                             id="duration" 
                             rows="2"> 
                              {{ old('duration', $tour->duration)}}
                             </textarea>
-                          </div>
-
-                          <div class="form-group">    
-                            <label for="name">Precio Total Aproximado</label>                          
-                            <input type="text" 
-                            class="form-control" 
-                            id="price" 
-                            name="price"
-                            value="{{ old('price', $tour->price)}}"
-                            >
-                          </div>
-
-                          <div class="form-group"> 
-                            <label for="name">Precio del viaje</label>                             
-                            <input type="text" 
-                            class="form-control" 
-                            id="price-travel" 
-                            name="price-travel"
-                            value="{{ old('price-travel', $tour['price-travel'])}}"
-                            >
                           </div>
 
                           <hr>

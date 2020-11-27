@@ -12,7 +12,7 @@
   
     <div class="card-img-overlay">
       <div class="center-text">
-        <h2 class="card-title">Bienvenido al mejor centro turistico</h2>
+        <h2 class="card-title">Bienvenido a Beas</h2>
         <a href="{{url('tours')}}" class="btn">
           <svg width="201" height="51" viewBox="0 0 201 51">
             <defs>
@@ -39,7 +39,7 @@
   <div class="row">
     <div class="col-sm-6 pr-0 pl-0">
       <div class="card">
-        <img class="card-img" src="img/vista2..jpeg" alt="" />
+        <img class="card-img" src="img/vista1.jpg" alt="" />
         <div class="card-img-overlay"></div>
       </div>
     </div>
@@ -59,23 +59,19 @@
         <div class="nuevo">
           <img
             class="card-img w-100"
-            src="/img/Huancayo.1.jpg"
+            src="/img/beas.jpg"
             alt=""
           /><!--imagen de rotacion-->
         </div>
       </div>
       <div class="col-md-6 pl-0" id="about">
         <div class="content">
-          <h3>HUANCAYO</h3>
-          <h4>"¡Ciudad Incontrastable!"</h4>
+          <h3>BEAS</h3>
+          <h4>"Tu mejor manera de crecer"</h4>
           <hr />
           <p>
-            Huancayo es una ciudad en la que podrás disfrutar de la
-            hospitalidad de su gente, de la belleza de sus lugares naturales
-            como: nevados, lagunas, campiñas y aprender su historia a través
-            de sus sitios arqueológicos, iglesias de la época colonial,
-            parques, artesanía, danzas folklóricas, comidas típicas y
-            fiestas costumbristas.
+          Estamos comprometidos con tu desarrollo por eso registra tu 
+          empresa o negocio ahara y te ayudaremos a crecer.
           </p>
         </div>
       </div>
@@ -85,25 +81,27 @@
 
 <div class="container recent" id="activity">
   <div class="container">
-    <h2>Los mejores Tours</h2>
+    <h2>Las mejores Empresas</h2>
     <div class="d-flex flex-row justify-content-center alig-items-center">
       <div class="row col-md-12">
         <div>
           <div class="card">
             <img
               class="card-img"
-              src="img/carhuamayo-img2.jpg"
+              src="img/despegar.jpg"
               alt=""
             />
             <div class="card-img-overlay">
+              <!--
               <a href="{{url('huancayo')}}"
-                ><img
+              -->
+              <img
                   src="img/heart.png"
                   class="heart"
                   alt="heart icon"
               /></a>
               <div class="bottom-text">
-                <h5 class="card-title">Huancayo</h5>
+                <h5 class="card-title">Despegar</h5>
                 <!--<p class="card-text"><b>La plaza Constitución vendría a ser el equivalente a la plaza de armas de la ciudad.
                                   Ubicada al costado de la calle Real brinda un espacio bello y lleno de historia, tradición y cultura.</b></p>
                                 -->
@@ -113,16 +111,21 @@
         </div>
         <div>
           <div class="card">
-            <img class="card-img" src="img/huancayo1.jpeg" alt="" />
+            <img 
+              class="card-img" 
+              src="img/edu.jpg" 
+              alt="" />
             <div class="card-img-overlay">
+              <!--
               <a href="{{url('identidad')}}"
-                ><img
+            -->
+                <img
                   src="img/heart.png"
                   class="heart"
                   alt="heart icon"
               /></a>
               <div class="bottom-text">
-                <h5 class="card-title">Parque Identidad</h5>
+                <h5 class="card-title">Multiservicios Edu</h5>
                 <!--<p class="card-text"><b>Es la identidad de Huancayo como cultura, pues tiene monumentos a artistas
                                   reconocidos e imágenes que son parte de la historia de la provincia y ciudad como de su folklore.</b></p>
                                 -->
@@ -134,18 +137,20 @@
           <div class="card">
             <img
               class="card-img"
-              src="img/carhuamayo-img3.jpg"
+              src="img/baratus.jpg"
               alt="Huaytapallana"
             />
             <div class="card-img-overlay">
+              <!--
               <a href="{{url('huaytapallana')}}"
-                ><img
+            -->
+                <img
                   src="img/heart.png"
                   class="heart"
                   alt="heart icon"
               /></a>
               <div class="bottom-text">
-                <h5 class="card-title">Huaytapallana</h5>
+                <h5 class="card-title">Abarrotes Baratus</h5>
                 <!--<p class="card-text"><b>Huaytapallana es una montaña del Perú que pertenece a la Cordillera de Huaytapallana,
                                   una prolongación de la Cordillera Central, ramal montañoso de los Andes.</b></p>
                                 -->
@@ -157,18 +162,19 @@
           <div class="card">
             <img
               class="card-img"
-              src="img/carhuamayo-img4.jpg"
+              src="img/ternura.jpg"
               alt="ñahuimpuquio"
             />
             <div class="card-img-overlay">
+              <!--
               <a href="{{url('ñahuimpuquio')}}"
-                ><img
+            --><img
                   src="img/heart.png"
                   class="heart"
                   alt="heart icon"
               /></a>
               <div class="bottom-text">
-                <h5 class="card-title">Laguna Ñahuimpuquio</h5>
+                <h5 class="card-title">Detalles Ternura</h5>
                 <!--<p class="card-text"><b>La Laguna Azul, también conocida como Laguna del Sauce se encuentra localizada en el distrito
                                   de Sauce dentro de la región de San Martín. Esta ocupa una extensión de 430, 80 hectáreas</b></p>
                                 -->

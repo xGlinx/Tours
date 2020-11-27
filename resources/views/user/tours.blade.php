@@ -2,33 +2,25 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="container recent">
-            @forelse ($tours as $tour)
-            <div class="">
-            <div class="card">
-                <div class="card-header">
-                    {{$tour->name}}
-                </div>
+    @forelse ($tours as $tour)
+        <div class="col-md-5">
+            <div class="card mb-4"> 
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <iframe src="{{$tour['url-photo']}}" position="center" width="348" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="card-text">{{$tour->description}}</p>
-                            <p class="card-text">Duración: {{$tour->duration}}</p>
-                            <p class="card-text">Precio Estimado: S/. {{$tour['price']}}</p>
-                            <a class="btn btn-primary" href="{{route ('tours.show', $tour->id) }}" >Ver detalles</a>
-                        </div>
+                    <div align="center">
+                        <img src="{{$tour['url-photo']}}" alt="{{$tour->name}}" width="150" height="150">
                     </div>
+                    <h4 class="card-title">{{$tour->name}}</h4>
+                    <p class="card-text">{{$tour->description}}</p>
+                </div>
+                <div  align="center" class="card-footer">
+                    <a class="btn btn-primary" href="{{route ('tours.show', $tour->id) }}" >Ver detalles</a>
                 </div>
             </div>
-            @empty
-            <p>No hay ningun Tour</p>
-            </div>
-
-            @endforelse
         </div>
-    </div>  
+    @empty
+    <p>No se encuentra ningun Servicio</p> 
+    @endforelse
+    </div>
+           
 </div>
 @endsection 

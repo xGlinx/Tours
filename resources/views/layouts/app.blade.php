@@ -28,7 +28,7 @@
             <div id="my-nav" class="collapse navbar-collapse">
                 <ul class="navbar-nav mx-auto">
                 <li class="nav-item"> <a class="nav-link" href="{{url(" ")}}">Inicio</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="{{ url('tours') }}" tabindex="-1" aria-disabled="true">Tours</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('tours') }}" tabindex="-1" aria-disabled="true">Empresas</a></li>
 
                     @if (Route::has('login'))                    
                             @auth
@@ -69,7 +69,6 @@
         
     <footer class="container-fluid p-0 pr-0">
         <div class="copy pt-4 pb-4">
-            <p> Chavez &nbsp; |  &nbsp; Huaman &nbsp;| &nbsp; Perez  &nbsp; </p>
             <p> Todos los derechos reservados &copy; 2020 </p>
         </div>
     </footer>

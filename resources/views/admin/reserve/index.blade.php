@@ -20,8 +20,8 @@
                     <thead>
                         <tr>
                         <th scope="col">Usuario</th>
-                        <th scope="col">Tour</th>
-                        <th scope="col">Fecha de partida</th>
+                        <th scope="col">Empresa</th>
+                        <th scope="col">Fecha de reserva</th>
                         <th colspan="2">Opciones</th>
                         <th scope="col">Estado</th>
                         </tr>

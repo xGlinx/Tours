@@ -16,10 +16,8 @@
                     <thead>
                         <tr>
                         <th scope="col">Tour</th>
-                        <th scope="col">Ruta</th>
-                        <th scope="col">Restaurantes</th>
-                        <th scope="col">Hospedajes</th>
-                        <th scope="col">Fecha de viaje</th>
+                        <th scope="col">Servicios</th>
+                        <th scope="col">Fecha de Reserva</th>
                         <th colspan="1">Opciones</th>
                         <th scope="col">Estado</th>
                         </tr>
@@ -29,8 +27,6 @@
                     @foreach ($reserves as $reserve)
                         <tr>
                             <td>{{ $reserve->tour->name }}</td>
-                            <td>{{ $reserve->route->name }}</td>
-                            <td>{{ $reserve->restaurant->name }}</td>
                             <td>{{ $reserve->lodging->name }}</td>
                             <td>{{ $reserve->date }}</td>
                             <td> <a class="btn btn-dark" href="{{route('reserves.edit', $reserve->id)}}">Cancelar </a> </td>
